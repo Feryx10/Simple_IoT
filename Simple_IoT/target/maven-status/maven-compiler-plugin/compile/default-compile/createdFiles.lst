@@ -1,0 +1,9 @@
+objects\ElectricityInfo.class
+main\SecondaryController.class
+objects\Lights.class
+main\App.class
+module-info.class
+windows\FXMLmainController.class
+objects\Device.class
+main\PrimaryController.class
+objects\AirConditioner.class
