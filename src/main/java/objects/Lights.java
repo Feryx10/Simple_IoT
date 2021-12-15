@@ -1,48 +1,39 @@
 package objects;
 
-public class Lights implements Device{
-	private final int id;
-	private final String brand;
-	private String buildingName;
+public class Lights{
+	private final String id;
 	private boolean mode;
+	private double nBulb;
 	private final double consumption;	
 
-	public Lights(int id, String brand, String buildingName, boolean mode, double consumption) {		
-		this.id = id;
-		this.brand = brand;
-		this.buildingName = buildingName;
-		this.mode = mode;
-		this.consumption = consumption;
+	public Lights(String id, int nBulb) {		
+		this.id = id;	
+		this.mode = false;
+		this.nBulb = nBulb;
+		this.consumption = 25.0*nBulb;
 	}
 
-	@Override
-	public int getID() {		
-		return this.id;
+	public boolean isMode() {
+		return mode;
 	}
 
-	@Override
-	public String getBuilding() {
-		// TODO Auto-generated method stub
-		return this.buildingName;
-	}
-
-	@Override
-	public void setBuilding(String building) {
-		this.buildingName = building;
-	}
-
-	@Override
-	public void setStandBy(boolean mode) {
+	public void setMode(boolean mode) {
 		this.mode = mode;
 	}
 
-	@Override
-	public String getStatus() {
-		return "";		
+	public double getnBulb() {
+		return nBulb;
+	}
+
+	public void setnBulb(double nBulb) {
+		this.nBulb = nBulb;
+	}
+
+	public String getId() {
+		return id;
 	}
 
 	public double getConsumption() {
 		return consumption;
-	}	
-
+	}
 }

@@ -34,10 +34,7 @@ public class FXMLmainController implements Initializable {
      */
     @Override
     public void initialize(URL url, ResourceBundle rb) {
-    	AirConditioner classroom01 = new AirConditioner(1, "Samsung", "Servicios Miltiples", 0.42);
-    	AirConditioner classroom02 = new AirConditioner(2, "Samsung", "Servicios Miltiples", 0.42);
-    	AirConditioner classroom03 = new AirConditioner(3, "Samsung", "Servicios Miltiples", 0.42);
-    	AirConditioner classroom04 = new AirConditioner(4, "Samsung", "Servicios Miltiples", 0.42);   
+
     }    
     
     @FXML
