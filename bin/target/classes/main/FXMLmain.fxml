@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.AmbientLight?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="windows.FXMLmainController">
+   <children>
+      <AnchorPane layoutX="15.0" layoutY="12.0" prefHeight="376.0" prefWidth="570.0">
+         <children>
+            <AnchorPane layoutX="13.0" layoutY="11.0" prefHeight="354.0" prefWidth="545.0">
+               <children>
+                  <Button fx:id="switchL01" layoutX="92.0" layoutY="77.0" minWidth="-Infinity" mnemonicParsing="false" onMouseClicked="#switch01" prefWidth="37.0" text="On" />
+                  <Circle fx:id="L01" fill="#000000d1" layoutX="81.0" layoutY="42.0" radius="19.0" strokeType="INSIDE">
+                     <stroke>
+                        <RadialGradient centerX="0.5165745856353591" centerY="0.5" radius="0.5">
+                           <stops>
+                              <Stop>
+                                 <color>
+                                    <Color />
+                                 </color>
+                              </Stop>
+                              <Stop offset="0.5708812260536398">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                              <Stop offset="1.0">
+                                 <color>
+                                    <Color red="1.0" green="1.0" blue="1.0" />
+                                 </color>
+                              </Stop>
+                           </stops>
+                        </RadialGradient>
+                     </stroke>
+                     <effect>
+                        <InnerShadow>
+                           <color>
+                              <Color red="1.0" green="1.0" blue="1.0" />
+                           </color>
+                        </InnerShadow>
+                     </effect>
+                  </Circle>
+                  <AmbientLight color="CHARTREUSE" layoutX="253.0" layoutY="61.0" lightOn="true" />
+                  <Text fx:id="Temp01" layoutX="123.0" layoutY="48.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20°">
+                     <font>
+                        <Font name="Lucida Console" size="22.0" />
+                     </font>
+                  </Text>
+               </children>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
