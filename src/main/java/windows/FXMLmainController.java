@@ -8,6 +8,7 @@ import objects.AirConditioner;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.control.Button;
+import javafx.scene.control.ToggleButton;
 import javafx.scene.paint.Color;
 import javafx.scene.shape.Circle;
 import javafx.scene.text.Text;
@@ -19,8 +20,7 @@ import main.App;
  * @author F. Pino
  */
 public class FXMLmainController implements Initializable {
-	@FXML
-	private Button switchL01;
+	
 	@FXML
 	private Circle L01;
 	@FXML
@@ -39,15 +39,15 @@ public class FXMLmainController implements Initializable {
     
     @FXML
     private void switchToSecondary() throws IOException {
-        App.setRoot("windowSecondFloor");
+        App.setRoot("windowBuilding01");
     }
     
     public void switch01() {
-    	this.statusL01 = this.clickSwitch(statusL01, switchL01, L01);
+    	
     	this.updateStatus();
     }
     
-    public boolean clickSwitch(boolean status, Button x, Circle y) {
+    public boolean clickSwitch(boolean status, ToggleButton x, Circle y) {
     	if(status) {
     		x.setText("Off");
     		y.setFill(Color.RED);

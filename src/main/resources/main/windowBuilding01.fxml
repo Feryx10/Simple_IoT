@@ -1,0 +1,1555 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.chart.StackedBarChart?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleButton?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.effect.GaussianBlur?>
+<?import javafx.scene.effect.InnerShadow?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.RadialGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" minHeight="720.0" minWidth="1280.0" prefHeight="400.0" prefWidth="1280.0" style="-fx-background-color: Cornsilk;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="windows.FXMLbuilding01Controller">
+   <children>
+      <AnchorPane layoutY="33.0" prefHeight="687.0" prefWidth="1280.0">
+         <children>
+            <AnchorPane layoutX="4.0" layoutY="309.0" prefHeight="374.0" prefWidth="716.0" style="-fx-background-color: GhostWhite; -fx-background-radius: 10px;">
+               <children>
+                  <AnchorPane layoutX="9.0" layoutY="14.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
+                     <children>
+                        <Circle fx:id="LB1" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
+                           <stroke>
+                              <RadialGradient centerX="0.5165745856353591" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.5708812260536398">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </stroke>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="18.0" layoutY="33.0">
+                           <image>
+                              <Image url="@bulb.png" />
+                           </image>
+                        </ImageView>
+                        <ToggleButton fx:id="buttonLB1" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB1" prefHeight="22.0" prefWidth="34.0" text="Off" />
+                        <Button layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
+                        <Button layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
+                        <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
+                        <AnchorPane layoutX="65.0" layoutY="19.0" prefHeight="80.0" prefWidth="90.0" style="-fx-background-radius: 10px; -fx-background-color: CadetBlue;">
+                           <children>
+                              <Text fx:id="Temp013" layoutX="33.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20°">
+                                 <font>
+                                    <Font name="System Bold Italic" size="29.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="34.0" layoutY="50.0">
+                                 <image>
+                                    <Image url="@cold.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@hot.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@fan.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Circle fill="LIME" layoutX="14.0" layoutY="18.0" radius="6.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                           </children>
+                           <effect>
+                              <InnerShadow choke="0.46">
+                                 <color>
+                                    <Color red="0.0026803119108080864" green="0.28947368264198303" blue="0.20343567430973053" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutY="100.0" prefHeight="62.0" prefWidth="66.0" style="-fx-background-radius: 0 20 0 20; -fx-background-color: MintCream;">
+                           <children>
+                              <TextField layoutX="5.0" layoutY="33.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="1000w/h">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                              <TextField layoutX="5.0" layoutY="11.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="Temp Ex">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <effect>
+                              <DropShadow height="9.275" radius="3.40375" width="6.34" />
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutX="37.0" layoutY="-1.0" prefHeight="15.0" prefWidth="90.0" style="-fx-background-radius: 0 0 10 10; -fx-background-color: Coral;">
+                           <children>
+                              <Text layoutX="28.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sala 11" wrappingWidth="35.0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <effect>
+                              <DropShadow height="4.89" radius="7.4375" width="26.86" />
+                           </effect>
+                        </AnchorPane>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane layoutX="187.0" layoutY="14.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
+                     <children>
+                        <Circle fx:id="LB2" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
+                           <stroke>
+                              <RadialGradient centerX="0.5165745856353591" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.5708812260536398">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </stroke>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="18.0" layoutY="33.0">
+                           <image>
+                              <Image url="@bulb.png" />
+                           </image>
+                        </ImageView>
+                        <ToggleButton fx:id="buttonLB2" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB2" prefHeight="22.0" prefWidth="34.0" text="Off" />
+                        <Button layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
+                        <Button layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
+                        <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
+                        <AnchorPane layoutX="65.0" layoutY="19.0" prefHeight="80.0" prefWidth="90.0" style="-fx-background-radius: 10px; -fx-background-color: CadetBlue;">
+                           <children>
+                              <Text fx:id="Temp0131" layoutX="33.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20°">
+                                 <font>
+                                    <Font name="System Bold Italic" size="29.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="34.0" layoutY="50.0">
+                                 <image>
+                                    <Image url="@cold.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@hot.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@fan.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Circle fill="LIME" layoutX="14.0" layoutY="17.0" radius="6.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                           </children>
+                           <effect>
+                              <InnerShadow choke="0.46">
+                                 <color>
+                                    <Color red="0.0026803119108080864" green="0.28947368264198303" blue="0.20343567430973053" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutY="100.0" prefHeight="62.0" prefWidth="66.0" style="-fx-background-radius: 0 20 0 20; -fx-background-color: MintCream;">
+                           <children>
+                              <TextField layoutX="5.0" layoutY="33.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="1000w/h">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                              <TextField layoutX="5.0" layoutY="11.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="Temp Ex">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <effect>
+                              <DropShadow height="9.275" radius="3.40375" width="6.34" />
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutX="37.0" layoutY="-1.0" prefHeight="15.0" prefWidth="90.0" style="-fx-background-radius: 0 0 10 10; -fx-background-color: Coral;">
+                           <children>
+                              <Text layoutX="28.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sala 12" wrappingWidth="35.0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <effect>
+                              <DropShadow height="4.89" radius="7.4375" width="26.86" />
+                           </effect>
+                        </AnchorPane>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane layoutX="365.0" layoutY="14.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
+                     <children>
+                        <Circle fx:id="LB3" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
+                           <stroke>
+                              <RadialGradient centerX="0.5165745856353591" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.5708812260536398">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </stroke>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="18.0" layoutY="33.0">
+                           <image>
+                              <Image url="@bulb.png" />
+                           </image>
+                        </ImageView>
+                        <ToggleButton fx:id="buttonLB3" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB3" prefHeight="22.0" prefWidth="34.0" text="Off" />
+                        <Button layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
+                        <Button layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
+                        <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
+                        <AnchorPane layoutX="65.0" layoutY="19.0" prefHeight="80.0" prefWidth="90.0" style="-fx-background-radius: 10px; -fx-background-color: CadetBlue;">
+                           <children>
+                              <Text fx:id="Temp0132" layoutX="33.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20°">
+                                 <font>
+                                    <Font name="System Bold Italic" size="29.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="34.0" layoutY="50.0">
+                                 <image>
+                                    <Image url="@cold.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@hot.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@fan.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Circle fill="LIME" layoutX="14.0" layoutY="17.0" radius="6.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                           </children>
+                           <effect>
+                              <InnerShadow choke="0.46">
+                                 <color>
+                                    <Color red="0.0026803119108080864" green="0.28947368264198303" blue="0.20343567430973053" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutY="100.0" prefHeight="62.0" prefWidth="66.0" style="-fx-background-radius: 0 20 0 20; -fx-background-color: MintCream;">
+                           <children>
+                              <TextField layoutX="5.0" layoutY="33.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="1000w/h">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                              <TextField layoutX="5.0" layoutY="11.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="Temp Ex">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <effect>
+                              <DropShadow height="9.275" radius="3.40375" width="6.34" />
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutX="37.0" layoutY="-1.0" prefHeight="15.0" prefWidth="90.0" style="-fx-background-radius: 0 0 10 10; -fx-background-color: Coral;">
+                           <children>
+                              <Text layoutX="28.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sala 13" wrappingWidth="35.0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <effect>
+                              <DropShadow height="4.89" radius="7.4375" width="26.86" />
+                           </effect>
+                        </AnchorPane>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane layoutX="543.0" layoutY="14.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
+                     <children>
+                        <Circle fx:id="LB4" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
+                           <stroke>
+                              <RadialGradient centerX="0.5165745856353591" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.5708812260536398">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </stroke>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="18.0" layoutY="33.0">
+                           <image>
+                              <Image url="@bulb.png" />
+                           </image>
+                        </ImageView>
+                        <ToggleButton fx:id="buttonLB4" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB4" prefHeight="22.0" prefWidth="34.0" text="Off" />
+                        <Button layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
+                        <Button layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
+                        <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
+                        <AnchorPane layoutX="65.0" layoutY="19.0" prefHeight="80.0" prefWidth="90.0" style="-fx-background-radius: 10px; -fx-background-color: CadetBlue;">
+                           <children>
+                              <Text fx:id="Temp0133" layoutX="33.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20°">
+                                 <font>
+                                    <Font name="System Bold Italic" size="29.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="34.0" layoutY="50.0">
+                                 <image>
+                                    <Image url="@cold.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@hot.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@fan.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Circle fill="LIME" layoutX="14.0" layoutY="17.0" radius="6.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                           </children>
+                           <effect>
+                              <InnerShadow choke="0.46">
+                                 <color>
+                                    <Color red="0.0026803119108080864" green="0.28947368264198303" blue="0.20343567430973053" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutY="100.0" prefHeight="62.0" prefWidth="66.0" style="-fx-background-radius: 0 20 0 20; -fx-background-color: MintCream;">
+                           <children>
+                              <TextField layoutX="5.0" layoutY="33.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="1000w/h">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                              <TextField layoutX="5.0" layoutY="11.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="Temp Ex">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <effect>
+                              <DropShadow height="9.275" radius="3.40375" width="6.34" />
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutX="37.0" layoutY="-1.0" prefHeight="15.0" prefWidth="90.0" style="-fx-background-radius: 0 0 10 10; -fx-background-color: Coral;">
+                           <children>
+                              <Text layoutX="28.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sala 14" wrappingWidth="35.0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <effect>
+                              <DropShadow height="4.89" radius="7.4375" width="26.86" />
+                           </effect>
+                        </AnchorPane>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane layoutX="9.0" layoutY="202.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
+                     <children>
+                        <Circle fx:id="LB14" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
+                           <stroke>
+                              <RadialGradient centerX="0.5165745856353591" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.5708812260536398">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </stroke>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="18.0" layoutY="33.0">
+                           <image>
+                              <Image url="@bulb.png" />
+                           </image>
+                        </ImageView>
+                        <ToggleButton fx:id="switchLB124" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB1" prefHeight="22.0" prefWidth="34.0" text="Off" />
+                        <Button disable="true" layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
+                        <Button disable="true" layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
+                        <Button disable="true" layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
+                        <AnchorPane layoutX="65.0" layoutY="19.0" prefHeight="80.0" prefWidth="90.0" style="-fx-background-radius: 10px; -fx-background-color: CadetBlue;">
+                           <children>
+                              <Text fx:id="Temp0134" layoutX="33.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--°">
+                                 <font>
+                                    <Font name="System Bold Italic" size="29.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="34.0" layoutY="50.0">
+                                 <image>
+                                    <Image url="@cold.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@hot.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@fan.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Circle layoutX="14.0" layoutY="19.0" radius="6.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                           </children>
+                           <effect>
+                              <InnerShadow choke="0.46">
+                                 <color>
+                                    <Color red="0.0026803119108080864" green="0.28947368264198303" blue="0.20343567430973053" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutY="100.0" prefHeight="62.0" prefWidth="66.0" style="-fx-background-radius: 0 20 0 20; -fx-background-color: MintCream;">
+                           <children>
+                              <TextField layoutX="5.0" layoutY="33.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="1000w/h">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                              <TextField layoutX="5.0" layoutY="11.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="Temp Ex">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <effect>
+                              <DropShadow height="9.275" radius="3.40375" width="6.34" />
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutX="37.0" layoutY="-1.0" prefHeight="15.0" prefWidth="90.0" style="-fx-background-radius: 0 0 10 10; -fx-background-color: Coral;">
+                           <children>
+                              <Text layoutX="28.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Baño V" wrappingWidth="35.0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <effect>
+                              <DropShadow height="4.89" radius="7.4375" width="26.86" />
+                           </effect>
+                        </AnchorPane>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane layoutX="187.0" layoutY="202.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
+                     <children>
+                        <Circle fx:id="LB15" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
+                           <stroke>
+                              <RadialGradient centerX="0.5165745856353591" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.5708812260536398">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </stroke>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="18.0" layoutY="33.0">
+                           <image>
+                              <Image url="@bulb.png" />
+                           </image>
+                        </ImageView>
+                        <ToggleButton fx:id="switchLB125" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB1" prefHeight="22.0" prefWidth="34.0" text="Off" />
+                        <Button disable="true" layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
+                        <Button disable="true" layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
+                        <Button disable="true" layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
+                        <AnchorPane layoutX="65.0" layoutY="19.0" prefHeight="80.0" prefWidth="90.0" style="-fx-background-radius: 10px; -fx-background-color: CadetBlue;">
+                           <children>
+                              <Text fx:id="Temp0135" layoutX="33.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--°">
+                                 <font>
+                                    <Font name="System Bold Italic" size="29.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="34.0" layoutY="50.0">
+                                 <image>
+                                    <Image url="@cold.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@hot.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@fan.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Circle layoutX="14.0" layoutY="18.0" radius="6.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                           </children>
+                           <effect>
+                              <InnerShadow choke="0.46">
+                                 <color>
+                                    <Color red="0.0026803119108080864" green="0.28947368264198303" blue="0.20343567430973053" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutY="100.0" prefHeight="62.0" prefWidth="66.0" style="-fx-background-radius: 0 20 0 20; -fx-background-color: MintCream;">
+                           <children>
+                              <TextField layoutX="5.0" layoutY="33.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="1000w/h">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                              <TextField layoutX="5.0" layoutY="11.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="Temp Ex">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <effect>
+                              <DropShadow height="9.275" radius="3.40375" width="6.34" />
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutX="37.0" layoutY="-1.0" prefHeight="15.0" prefWidth="90.0" style="-fx-background-radius: 0 0 10 10; -fx-background-color: Coral;">
+                           <children>
+                              <Text layoutX="28.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Baño D" wrappingWidth="40.0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <effect>
+                              <DropShadow height="4.89" radius="7.4375" width="26.86" />
+                           </effect>
+                        </AnchorPane>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane layoutX="453.0" layoutY="202.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
+                     <children>
+                        <Circle fx:id="LB16" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
+                           <stroke>
+                              <RadialGradient centerX="0.5165745856353591" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.5708812260536398">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </stroke>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="18.0" layoutY="33.0">
+                           <image>
+                              <Image url="@bulb.png" />
+                           </image>
+                        </ImageView>
+                        <ToggleButton fx:id="switchLB126" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB1" prefHeight="22.0" prefWidth="34.0" text="Off" />
+                        <Button disable="true" layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
+                        <Button disable="true" layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
+                        <Button disable="true" layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
+                        <AnchorPane layoutX="65.0" layoutY="19.0" prefHeight="80.0" prefWidth="90.0" style="-fx-background-radius: 10px; -fx-background-color: CadetBlue;">
+                           <children>
+                              <Text fx:id="Temp0136" layoutX="33.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="--°">
+                                 <font>
+                                    <Font name="System Bold Italic" size="29.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="34.0" layoutY="50.0">
+                                 <image>
+                                    <Image url="@cold.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@hot.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@fan.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                              <Circle layoutX="16.0" layoutY="17.0" radius="6.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                           </children>
+                           <effect>
+                              <InnerShadow choke="0.46">
+                                 <color>
+                                    <Color red="0.0026803119108080864" green="0.28947368264198303" blue="0.20343567430973053" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutY="100.0" prefHeight="62.0" prefWidth="66.0" style="-fx-background-radius: 0 20 0 20; -fx-background-color: MintCream;">
+                           <children>
+                              <TextField layoutX="5.0" layoutY="33.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="1000w/h">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                              <TextField layoutX="5.0" layoutY="11.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="Temp Ex">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <effect>
+                              <DropShadow height="9.275" radius="3.40375" width="6.34" />
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutX="37.0" layoutY="-1.0" prefHeight="15.0" prefWidth="90.0" style="-fx-background-radius: 0 0 10 10; -fx-background-color: Coral;">
+                           <children>
+                              <Text layoutX="15.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Oficina Aseo" wrappingWidth="66.0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <effect>
+                              <DropShadow height="4.89" radius="7.4375" width="26.86" />
+                           </effect>
+                        </AnchorPane>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+            <StackedBarChart layoutX="311.0" layoutY="7.0" prefHeight="290.0" prefWidth="513.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </StackedBarChart>
+            <PieChart fx:id="chart" layoutX="14.0" layoutY="6.0" prefHeight="290.0" prefWidth="290.0" />
+            <LineChart layoutX="833.0" layoutY="1.0" prefHeight="290.0" prefWidth="416.0">
+              <xAxis>
+                <CategoryAxis side="BOTTOM" />
+              </xAxis>
+              <yAxis>
+                <NumberAxis side="LEFT" />
+              </yAxis>
+            </LineChart>
+            <AnchorPane layoutX="729.0" layoutY="309.0" prefHeight="374.0" prefWidth="545.0" style="-fx-background-color: GhostWhite; -fx-background-radius: 10px;">
+               <children>
+                  <AnchorPane layoutX="5.0" layoutY="14.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
+                     <children>
+                        <Circle fx:id="LB11" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
+                           <stroke>
+                              <RadialGradient centerX="0.5165745856353591" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.5708812260536398">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </stroke>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="18.0" layoutY="33.0">
+                           <image>
+                              <Image url="@bulb.png" />
+                           </image>
+                        </ImageView>
+                        <ToggleButton fx:id="switchLB121" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB1" prefHeight="22.0" prefWidth="34.0" text="Off" />
+                        <Button layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
+                        <Button layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
+                        <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
+                        <AnchorPane layoutX="65.0" layoutY="19.0" prefHeight="80.0" prefWidth="90.0" style="-fx-background-radius: 10px; -fx-background-color: CadetBlue;">
+                           <children>
+                              <Text fx:id="Temp0131" layoutX="33.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20°">
+                                 <font>
+                                    <Font name="System Bold Italic" size="29.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="34.0" layoutY="50.0">
+                                 <image>
+                                    <Image url="@cold.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@hot.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@fan.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <effect>
+                              <InnerShadow choke="0.46">
+                                 <color>
+                                    <Color red="0.0026803119108080864" green="0.28947368264198303" blue="0.20343567430973053" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutY="100.0" prefHeight="62.0" prefWidth="66.0" style="-fx-background-radius: 0 20 0 20; -fx-background-color: MintCream;">
+                           <children>
+                              <TextField layoutX="5.0" layoutY="33.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="1000w/h">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                              <TextField layoutX="5.0" layoutY="11.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="Temp Ex">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <effect>
+                              <DropShadow height="9.275" radius="3.40375" width="6.34" />
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutX="37.0" layoutY="-1.0" prefHeight="15.0" prefWidth="90.0" style="-fx-background-radius: 0 0 10 10; -fx-background-color: LightGreen;">
+                           <children>
+                              <Text layoutX="28.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sala 21" wrappingWidth="35.0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <effect>
+                              <DropShadow height="4.89" radius="7.4375" width="26.86" />
+                           </effect>
+                        </AnchorPane>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane layoutX="186.0" layoutY="14.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
+                     <children>
+                        <Circle fx:id="LB111" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
+                           <stroke>
+                              <RadialGradient centerX="0.5165745856353591" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.5708812260536398">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </stroke>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="18.0" layoutY="33.0">
+                           <image>
+                              <Image url="@bulb.png" />
+                           </image>
+                        </ImageView>
+                        <ToggleButton fx:id="switchLB1211" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB1" prefHeight="22.0" prefWidth="34.0" text="Off" />
+                        <Button layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
+                        <Button layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
+                        <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
+                        <AnchorPane layoutX="65.0" layoutY="19.0" prefHeight="80.0" prefWidth="90.0" style="-fx-background-radius: 10px; -fx-background-color: CadetBlue;">
+                           <children>
+                              <Text fx:id="Temp01311" layoutX="33.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20°">
+                                 <font>
+                                    <Font name="System Bold Italic" size="29.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="34.0" layoutY="50.0">
+                                 <image>
+                                    <Image url="@cold.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@hot.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@fan.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <effect>
+                              <InnerShadow choke="0.46">
+                                 <color>
+                                    <Color red="0.0026803119108080864" green="0.28947368264198303" blue="0.20343567430973053" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutY="100.0" prefHeight="62.0" prefWidth="66.0" style="-fx-background-radius: 0 20 0 20; -fx-background-color: MintCream;">
+                           <children>
+                              <TextField layoutX="5.0" layoutY="33.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="1000w/h">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                              <TextField layoutX="5.0" layoutY="11.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="Temp Ex">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <effect>
+                              <DropShadow height="9.275" radius="3.40375" width="6.34" />
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutX="37.0" layoutY="-1.0" prefHeight="15.0" prefWidth="90.0" style="-fx-background-radius: 0 0 10 10; -fx-background-color: LightGreen;">
+                           <children>
+                              <Text layoutX="28.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sala 22" wrappingWidth="35.0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <effect>
+                              <DropShadow height="4.89" radius="7.4375" width="26.86" />
+                           </effect>
+                        </AnchorPane>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane layoutX="370.0" layoutY="14.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
+                     <children>
+                        <Circle fx:id="LB121" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
+                           <stroke>
+                              <RadialGradient centerX="0.5165745856353591" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.5708812260536398">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </stroke>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="18.0" layoutY="33.0">
+                           <image>
+                              <Image url="@bulb.png" />
+                           </image>
+                        </ImageView>
+                        <ToggleButton fx:id="switchLB1221" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB1" prefHeight="22.0" prefWidth="34.0" text="Off" />
+                        <Button layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
+                        <Button layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
+                        <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
+                        <AnchorPane layoutX="65.0" layoutY="19.0" prefHeight="80.0" prefWidth="90.0" style="-fx-background-radius: 10px; -fx-background-color: CadetBlue;">
+                           <children>
+                              <Text fx:id="Temp01321" layoutX="33.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20°">
+                                 <font>
+                                    <Font name="System Bold Italic" size="29.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="34.0" layoutY="50.0">
+                                 <image>
+                                    <Image url="@cold.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@hot.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@fan.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <effect>
+                              <InnerShadow choke="0.46">
+                                 <color>
+                                    <Color red="0.0026803119108080864" green="0.28947368264198303" blue="0.20343567430973053" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutY="100.0" prefHeight="62.0" prefWidth="66.0" style="-fx-background-radius: 0 20 0 20; -fx-background-color: MintCream;">
+                           <children>
+                              <TextField layoutX="5.0" layoutY="33.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="1000w/h">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                              <TextField layoutX="5.0" layoutY="11.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="Temp Ex">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <effect>
+                              <DropShadow height="9.275" radius="3.40375" width="6.34" />
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutX="37.0" layoutY="-1.0" prefHeight="15.0" prefWidth="90.0" style="-fx-background-radius: 0 0 10 10; -fx-background-color: LightGreen;">
+                           <children>
+                              <Text layoutX="28.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sala 23" wrappingWidth="35.0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <effect>
+                              <DropShadow height="4.89" radius="7.4375" width="26.86" />
+                           </effect>
+                        </AnchorPane>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane layoutX="5.0" layoutY="202.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
+                     <children>
+                        <Circle fx:id="LB141" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
+                           <stroke>
+                              <RadialGradient centerX="0.5165745856353591" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.5708812260536398">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </stroke>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="18.0" layoutY="33.0">
+                           <image>
+                              <Image url="@bulb.png" />
+                           </image>
+                        </ImageView>
+                        <ToggleButton fx:id="switchLB1241" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB1" prefHeight="22.0" prefWidth="34.0" text="Off" />
+                        <Button layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
+                        <Button layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
+                        <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
+                        <AnchorPane layoutX="65.0" layoutY="19.0" prefHeight="80.0" prefWidth="90.0" style="-fx-background-radius: 10px; -fx-background-color: CadetBlue;">
+                           <children>
+                              <Text fx:id="Temp01341" layoutX="33.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20°">
+                                 <font>
+                                    <Font name="System Bold Italic" size="29.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="34.0" layoutY="50.0">
+                                 <image>
+                                    <Image url="@cold.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@hot.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@fan.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <effect>
+                              <InnerShadow choke="0.46">
+                                 <color>
+                                    <Color red="0.0026803119108080864" green="0.28947368264198303" blue="0.20343567430973053" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutY="100.0" prefHeight="62.0" prefWidth="66.0" style="-fx-background-radius: 0 20 0 20; -fx-background-color: MintCream;">
+                           <children>
+                              <TextField layoutX="5.0" layoutY="33.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="1000w/h">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                              <TextField layoutX="5.0" layoutY="11.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="Temp Ex">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <effect>
+                              <DropShadow height="9.275" radius="3.40375" width="6.34" />
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutX="37.0" layoutY="-1.0" prefHeight="15.0" prefWidth="90.0" style="-fx-background-radius: 0 0 10 10; -fx-background-color: LightGreen;">
+                           <children>
+                              <Text layoutX="28.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sala 24" wrappingWidth="35.0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <effect>
+                              <DropShadow height="4.89" radius="7.4375" width="26.86" />
+                           </effect>
+                        </AnchorPane>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane layoutX="183.0" layoutY="202.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
+                     <children>
+                        <Circle fx:id="LB151" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
+                           <stroke>
+                              <RadialGradient centerX="0.5165745856353591" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.5708812260536398">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </stroke>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="18.0" layoutY="33.0">
+                           <image>
+                              <Image url="@bulb.png" />
+                           </image>
+                        </ImageView>
+                        <ToggleButton fx:id="switchLB1251" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB1" prefHeight="22.0" prefWidth="34.0" text="Off" />
+                        <Button layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
+                        <Button layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
+                        <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
+                        <AnchorPane layoutX="65.0" layoutY="19.0" prefHeight="80.0" prefWidth="90.0" style="-fx-background-radius: 10px; -fx-background-color: CadetBlue;">
+                           <children>
+                              <Text fx:id="Temp01351" layoutX="33.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20°">
+                                 <font>
+                                    <Font name="System Bold Italic" size="29.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="34.0" layoutY="50.0">
+                                 <image>
+                                    <Image url="@cold.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@hot.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@fan.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <effect>
+                              <InnerShadow choke="0.46">
+                                 <color>
+                                    <Color red="0.0026803119108080864" green="0.28947368264198303" blue="0.20343567430973053" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutY="100.0" prefHeight="62.0" prefWidth="66.0" style="-fx-background-radius: 0 20 0 20; -fx-background-color: MintCream;">
+                           <children>
+                              <TextField layoutX="5.0" layoutY="33.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="1000w/h">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                              <TextField layoutX="5.0" layoutY="11.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="Temp Ex">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <effect>
+                              <DropShadow height="9.275" radius="3.40375" width="6.34" />
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutX="37.0" layoutY="-1.0" prefHeight="15.0" prefWidth="90.0" style="-fx-background-radius: 0 0 10 10; -fx-background-color: LightGreen;">
+                           <children>
+                              <Text layoutX="28.0" layoutY="12.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Sala 25" wrappingWidth="40.0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <effect>
+                              <DropShadow height="4.89" radius="7.4375" width="26.86" />
+                           </effect>
+                        </AnchorPane>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+                  <AnchorPane layoutX="370.0" layoutY="202.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
+                     <children>
+                        <Circle fx:id="LB161" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
+                           <stroke>
+                              <RadialGradient centerX="0.5165745856353591" centerY="0.5" radius="0.5">
+                                 <stops>
+                                    <Stop>
+                                       <color>
+                                          <Color />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="0.5708812260536398">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                    <Stop offset="1.0">
+                                       <color>
+                                          <Color red="1.0" green="1.0" blue="1.0" />
+                                       </color>
+                                    </Stop>
+                                 </stops>
+                              </RadialGradient>
+                           </stroke>
+                           <effect>
+                              <DropShadow />
+                           </effect>
+                        </Circle>
+                        <ImageView fitHeight="25.0" fitWidth="28.0" layoutX="18.0" layoutY="33.0">
+                           <image>
+                              <Image url="@bulb.png" />
+                           </image>
+                        </ImageView>
+                        <ToggleButton fx:id="switchLB1261" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB1" prefHeight="22.0" prefWidth="34.0" text="Off" />
+                        <Button layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
+                        <Button layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
+                        <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
+                        <AnchorPane layoutX="65.0" layoutY="19.0" prefHeight="80.0" prefWidth="90.0" style="-fx-background-radius: 10px; -fx-background-color: CadetBlue;">
+                           <children>
+                              <Text fx:id="Temp01361" layoutX="33.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20°">
+                                 <font>
+                                    <Font name="System Bold Italic" size="29.0" />
+                                 </font>
+                              </Text>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="34.0" layoutY="50.0">
+                                 <image>
+                                    <Image url="@cold.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@hot.png" />
+                                 </image>
+                              </ImageView>
+                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
+                                 <image>
+                                    <Image url="@fan.png" />
+                                 </image>
+                                 <effect>
+                                    <GaussianBlur radius="4.0" />
+                                 </effect>
+                              </ImageView>
+                              <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
+                                 <font>
+                                    <Font name="System Bold Italic" size="18.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <effect>
+                              <InnerShadow choke="0.46">
+                                 <color>
+                                    <Color red="0.0026803119108080864" green="0.28947368264198303" blue="0.20343567430973053" />
+                                 </color>
+                              </InnerShadow>
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutY="100.0" prefHeight="62.0" prefWidth="66.0" style="-fx-background-radius: 0 20 0 20; -fx-background-color: MintCream;">
+                           <children>
+                              <TextField layoutX="5.0" layoutY="33.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="1000w/h">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                              <TextField layoutX="5.0" layoutY="11.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="Temp Ex">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </TextField>
+                           </children>
+                           <effect>
+                              <DropShadow height="9.275" radius="3.40375" width="6.34" />
+                           </effect>
+                        </AnchorPane>
+                        <AnchorPane layoutX="37.0" layoutY="-1.0" prefHeight="15.0" prefWidth="90.0" style="-fx-background-radius: 0 0 10 10; -fx-background-color: LightGreen;">
+                           <children>
+                              <Text layoutX="12.0" layoutY="11.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Oficina Pagos" wrappingWidth="73.0">
+                                 <font>
+                                    <Font size="11.0" />
+                                 </font>
+                              </Text>
+                           </children>
+                           <effect>
+                              <DropShadow height="4.89" radius="7.4375" width="26.86" />
+                           </effect>
+                        </AnchorPane>
+                     </children>
+                     <effect>
+                        <DropShadow />
+                     </effect>
+                  </AnchorPane>
+               </children>
+               <effect>
+                  <DropShadow />
+               </effect>
+            </AnchorPane>
+         </children>
+      </AnchorPane>
+      <Button layoutX="14.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#switchToPrimary" text="Main" />
+      <Button layoutX="83.0" layoutY="2.0" mnemonicParsing="false" text="E. Servicios Multiples" />
+      <Button layoutX="216.0" layoutY="2.0" mnemonicParsing="false" text="E. Ing. Civil en Minas" />
+      <Button layoutX="348.0" layoutY="2.0" mnemonicParsing="false" text="E. Ing. Civil Electrica" />
+      <Button layoutX="474.0" layoutY="2.0" mnemonicParsing="false" text="E. Ing. Civil Electrica" />
+      <Button layoutX="606.0" layoutY="2.0" mnemonicParsing="false" text="Gimnasio" />
+      <Button layoutX="679.0" layoutY="2.0" mnemonicParsing="false" text="Salas E" />
+      <Button layoutX="737.0" layoutY="2.0" mnemonicParsing="false" text="E. Laboratorios " />
+   </children>
+</AnchorPane>
