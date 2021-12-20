@@ -3,17 +3,17 @@ package objects;
 public class Lights{
 	private final String id;
 	private boolean mode;
-	private double nBulb;
-	private final double consumption;	
+	private int nBulb;
+	private int consumption;	
 
 	public Lights(String id, int nBulb) {		
 		this.id = id;	
 		this.mode = false;
 		this.nBulb = nBulb;
-		this.consumption = 25.0*nBulb;
+		this.consumption = 85*nBulb;
 	}
 
-	public boolean isMode() {
+	public boolean getMode() {
 		return mode;
 	}
 
@@ -25,15 +25,19 @@ public class Lights{
 		return nBulb;
 	}
 
-	public void setnBulb(double nBulb) {
+	public void setnBulb(int nBulb) {
 		this.nBulb = nBulb;
+		this.consumption = 85*nBulb;		
 	}
 
 	public String getId() {
 		return id;
 	}
 
-	public double getConsumption() {
-		return consumption;
+	public int getConsumption() {
+		if(this.getMode())			
+			return consumption;
+		else 
+			return 0;
 	}
 }

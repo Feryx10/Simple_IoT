@@ -3,14 +3,12 @@ package objects;
 public class AirConditioner{
 	private final String id;
 	private int temp = 23;
-	private int externalTemp = 23;
+	private int externalTemp = 38+(int)(Math.random() * -10);
 	private String mode;
-	private int consumption;
 	
 	public AirConditioner(String id) {
 		this.id = id;	
-		this.mode="Off";
-		this.consumption = 500;
+		this.mode="Off";	
 	}
 
 	public int getTemp() {
@@ -25,8 +23,8 @@ public class AirConditioner{
 		return externalTemp;
 	}
 
-	public void setExternalTemp(int externalTemp) {
-		this.externalTemp = externalTemp;
+	public void setExternalTemp() {
+		this.externalTemp = 38+(int)(Math.random() * -10);
 	}
 
 	public String getMode() {
@@ -77,11 +75,18 @@ public class AirConditioner{
 	}
 
 	public int getConsumption() {
-		return consumption;
-	}
-
-	public void setConsumption(int consumption) {
-		this.consumption = consumption;
+		switch (this.getMode()) { 
+			case "Off":			
+				return 0;			
+			case "Hot":
+				return 2000;							
+			case "Cold":
+				return 1500;		
+			case "Fan":
+				return 600;	
+			default:
+				return 0;
+		}
 	}
 
 	public String getId() {

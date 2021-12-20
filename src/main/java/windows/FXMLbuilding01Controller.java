@@ -129,6 +129,8 @@ public class FXMLbuilding01Controller implements Initializable {
 
 	@FXML
 	private PieChart chart;
+	
+	private ObservableList<PieChart.Data> dataEnergy;
 
 	
 		
@@ -227,17 +229,17 @@ public class FXMLbuilding01Controller implements Initializable {
     }    
     
     private boolean clickSwitch(Lights lights, boolean status, ToggleButton x, Circle y) {
-        if(status) {
-            x.setText("On");
-            y.setFill(Color.GRAY);
-            lights.setMode(false);
-        }
-        else{
-            x.setText("Off");  
-            y.setFill(Color.RED);
-            lights.setMode(true);
-        }         
-        return status=!status;        
+    	if(status) {
+    		x.setText("On");
+    		y.setFill(Color.GRAY);
+    		lights.setMode(false);
+    	}
+    	else{
+    		x.setText("Off");  
+    		y.setFill(Color.RED);
+    		lights.setMode(true);
+    	}     	
+    	return status=!status;    	
     }
     
     private void switchTemp(boolean isUp,Text displayText, AirConditioner temp) {    	
@@ -267,7 +269,13 @@ public class FXMLbuilding01Controller implements Initializable {
     		displayText.setText("--°");
     		circle.setFill(Color.BLACK);
     	}
-    	else {    	
+    	else if (temp.getIntMode()==3){ 
+    		up.setDisable(true);
+    		down.setDisable(true);    
+    		displayText.setText("--°");
+    		circle.setFill(Color.LIME);
+    	}
+    	else {
     		displayText.setText(temp.getTemp()+"°");
     		up.setDisable(false);
     		down.setDisable(false);    		
@@ -318,6 +326,8 @@ public class FXMLbuilding01Controller implements Initializable {
     }
     
     public void updateStatus(){    
+    	externalTA1.setText(String.valueOf(Rooms.acB01_A01.getExternalTemp())+" °C");
+    	consumptionA1.setText(String.valueOf(Rooms.acB01_A01.getConsumption()+Rooms.lightsB01_A01.getConsumption())+"w/h");
     	String topic = "v1/devices/me/telemetry";
         String broker = "tcp://181.162.226.138:1883";
         String token = "FargsHPCuYAPTV5aG5pj";
@@ -330,6 +340,30 @@ public class FXMLbuilding01Controller implements Initializable {
     	boolean lightsB01_A03_power = Rooms.lightsB01_A03.isMode();
     	boolean lightsB01_A04_power = Rooms.lightsB01_A04.isMode();
     	
+    	externalTA2.setText(String.valueOf(Rooms.acB01_A02.getExternalTemp())+" °C");
+    	consumptionA2.setText(String.valueOf(Rooms.acB01_A02.getConsumption()+Rooms.lightsB01_A02.getConsumption())+"w/h");
+    	
+    	externalTA3.setText(String.valueOf(Rooms.acB01_A03.getExternalTemp())+" °C");
+    	consumptionA3.setText(String.valueOf(Rooms.acB01_A03.getConsumption()+Rooms.lightsB01_A03.getConsumption())+"w/h");
+    	
+    	externalTA4.setText(String.valueOf(Rooms.acB01_A04.getExternalTemp())+" °C");
+    	consumptionA4.setText(String.valueOf(Rooms.acB01_A04.getConsumption()+Rooms.lightsB01_A04.getConsumption())+"w/h");
+    	
+    	dataEnergy = FXCollections.observableArrayList( 
+ 			   new PieChart.Data("Sala11", Rooms.acB01_A01.getConsumption()+Rooms.lightsB01_A01.getConsumption()), 
+			   new PieChart.Data("Sala12", Rooms.acB01_A02.getConsumption()+Rooms.lightsB01_A02.getConsumption()), 
+			   new PieChart.Data("Sala13", Rooms.acB01_A03.getConsumption()+Rooms.lightsB01_A03.getConsumption()), 
+			   new PieChart.Data("Sala14", Rooms.acB01_A04.getConsumption()+Rooms.lightsB01_A04.getConsumption()),
+			   new PieChart.Data("Baño V", 00),
+ 			   new PieChart.Data("Baño D", 0), 
+ 			   new PieChart.Data("Oficina Aseo", 0), 
+ 			   new PieChart.Data("Sala21", 0), 
+ 			   new PieChart.Data("Sala22", 0),
+ 			   new PieChart.Data("Sala23", 0),
+ 			   new PieChart.Data("Sala24", 0),
+ 			   new PieChart.Data("Sala25", 0),
+ 			   new PieChart.Data("Oficina Pagos", 0));   
+    	chart.setData(dataEnergy); 
     	String acB01_A01_mode = Rooms.acB01_A01.getMode();
     	int acB01_A01_temp = Rooms.acB01_A01.getTemp();
     	String acB01_A02_mode = Rooms.acB01_A02.getMode();
@@ -383,20 +417,34 @@ public class FXMLbuilding01Controller implements Initializable {
      * Initializes the controller class.
      */
     @Override
-    public void initialize(URL url, ResourceBundle rb) {    
+    public void initialize(URL url, ResourceBundle rb) {  
+    	externalTA1.setText(String.valueOf(Rooms.acB01_A01.getExternalTemp())+" °C");
+    	consumptionA1.setText(String.valueOf(Rooms.acB01_A01.getConsumption()+Rooms.lightsB01_A01.getConsumption())+"w/h");
     	
-    	ObservableList<PieChart.Data> dataEnergy = FXCollections.observableArrayList( 
-    			   new PieChart.Data("SalaA1", 13), 
- 			       new PieChart.Data("SalaA2", 25), 
- 			       new PieChart.Data("SalaA3", 10), 
- 			   	   new PieChart.Data("SalaA4", 10),
- 			   	   new PieChart.Data("OficinaP1", 10),
-    			   new PieChart.Data("SalaB1", 13), 
-    			   new PieChart.Data("SalaB2", 25), 
-    			   new PieChart.Data("SalaB3", 10), 
-    			   new PieChart.Data("SalaB4", 10),
-    			   new PieChart.Data("SalaB5", 22),
-    			   new PieChart.Data("OficinaP2", 10));     	
+    	externalTA2.setText(String.valueOf(Rooms.acB01_A02.getExternalTemp())+" °C");
+    	consumptionA2.setText(String.valueOf(Rooms.acB01_A02.getConsumption()+Rooms.lightsB01_A02.getConsumption())+"w/h");
+    	
+    	externalTA3.setText(String.valueOf(Rooms.acB01_A03.getExternalTemp())+" °C");
+    	consumptionA3.setText(String.valueOf(Rooms.acB01_A03.getConsumption()+Rooms.lightsB01_A03.getConsumption())+"w/h");
+    	
+    	externalTA4.setText(String.valueOf(Rooms.acB01_A04.getExternalTemp())+" °C");
+    	consumptionA4.setText(String.valueOf(Rooms.acB01_A04.getConsumption()+Rooms.lightsB01_A04.getConsumption())+"w/h");
+    	
+    	
+    	dataEnergy = FXCollections.observableArrayList( 
+    			   new PieChart.Data("Sala11", Rooms.acB01_A01.getConsumption()+Rooms.lightsB01_A01.getConsumption()), 
+ 			       new PieChart.Data("Sala12", Rooms.acB01_A02.getConsumption()+Rooms.lightsB01_A02.getConsumption()), 
+ 			       new PieChart.Data("Sala13", Rooms.acB01_A03.getConsumption()+Rooms.lightsB01_A03.getConsumption()), 
+ 			   	   new PieChart.Data("Sala14", Rooms.acB01_A04.getConsumption()+Rooms.lightsB01_A04.getConsumption()),
+ 			   	   new PieChart.Data("Baño V", 0),
+    			   new PieChart.Data("Baño D", 0), 
+    			   new PieChart.Data("Oficina Aseo", 0), 
+    			   new PieChart.Data("Sala21", 0), 
+    			   new PieChart.Data("Sala22", 0),
+    			   new PieChart.Data("Sala23", 0),
+    			   new PieChart.Data("Sala24", 0),
+    			   new PieChart.Data("Sala25", 0),
+    			   new PieChart.Data("Oficina Pagos", 0));      	
     	chart.setData(dataEnergy); 
     	chart.setTitle("Consumo Energetico Total");
     	chart.setLabelsVisible(true);

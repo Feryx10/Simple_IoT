@@ -22,6 +22,8 @@ public class App extends Application {
         scene = new Scene(loadFXML("windowMain"));
         stage.setScene(scene);
         stage.setTitle("UTalca - IoT");
+        stage.setResizable(false);
+        stage.setMaximized(false);
         stage.show();
     }
 
