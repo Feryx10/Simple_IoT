@@ -328,17 +328,6 @@ public class FXMLbuilding01Controller implements Initializable {
     public void updateStatus(){    
     	externalTA1.setText(String.valueOf(Rooms.acB01_A01.getExternalTemp())+" °C");
     	consumptionA1.setText(String.valueOf(Rooms.acB01_A01.getConsumption()+Rooms.lightsB01_A01.getConsumption())+"w/h");
-    	String topic = "v1/devices/me/telemetry";
-        String broker = "tcp://181.162.226.138:1883";
-        String token = "FargsHPCuYAPTV5aG5pj";
-        int qos = 0;
-        String clientID = "GPU1";
-        MemoryPersistence mp = new MemoryPersistence();
-
-    	boolean lightsB01_A01_power = Rooms.lightsB01_A01.isMode();
-    	boolean lightsB01_A02_power = Rooms.lightsB01_A02.isMode();
-    	boolean lightsB01_A03_power = Rooms.lightsB01_A03.isMode();
-    	boolean lightsB01_A04_power = Rooms.lightsB01_A04.isMode();
     	
     	externalTA2.setText(String.valueOf(Rooms.acB01_A02.getExternalTemp())+" °C");
     	consumptionA2.setText(String.valueOf(Rooms.acB01_A02.getConsumption()+Rooms.lightsB01_A02.getConsumption())+"w/h");
@@ -373,7 +362,18 @@ public class FXMLbuilding01Controller implements Initializable {
     	String acB01_A04_mode = Rooms.acB01_A04.getMode();
     	int acB01_A04_temp = Rooms.acB01_A04.getTemp();
     	
-    	// Formato 
+    	// MQTT
+    	String topic = "v1/devices/me/telemetry";
+        String broker = "tcp://181.162.226.138:1883";
+        String token = "FargsHPCuYAPTV5aG5pj";
+        int qos = 0;
+        String clientID = "GPU1";
+        MemoryPersistence mp = new MemoryPersistence();
+
+    	boolean lightsB01_A01_power = Rooms.lightsB01_A01.isMode();
+    	boolean lightsB01_A02_power = Rooms.lightsB01_A02.isMode();
+    	boolean lightsB01_A03_power = Rooms.lightsB01_A03.isMode();
+    	boolean lightsB01_A04_power = Rooms.lightsB01_A04.isMode();
     	try {
             MqttClient client = new MqttClient(broker, clientID, mp);
             MqttConnectOptions opt = new MqttConnectOptions();
