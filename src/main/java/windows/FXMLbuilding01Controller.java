@@ -367,13 +367,18 @@ public class FXMLbuilding01Controller implements Initializable {
         String broker = "tcp://181.162.226.138:1883";
         String token = "FargsHPCuYAPTV5aG5pj";
         int qos = 0;
-        String clientID = "GPU1";
+        String clientID = "B01";
         MemoryPersistence mp = new MemoryPersistence();
 
     	boolean lightsB01_A01_power = Rooms.lightsB01_A01.getMode();
     	boolean lightsB01_A02_power = Rooms.lightsB01_A02.getMode();
     	boolean lightsB01_A03_power = Rooms.lightsB01_A03.getMode();
     	boolean lightsB01_A04_power = Rooms.lightsB01_A04.getMode();
+    	
+    	int B01_A01_energy = Rooms.lightsB01_A01.getConsumption()+Rooms.acB01_A01.getConsumption();
+    	int B01_A02_energy = Rooms.lightsB01_A02.getConsumption()+Rooms.acB01_A02.getConsumption();
+    	int B01_A03_energy = Rooms.lightsB01_A03.getConsumption()+Rooms.acB01_A03.getConsumption();
+    	int B01_A04_energy = Rooms.lightsB01_A04.getConsumption()+Rooms.acB01_A04.getConsumption();
     	try {
             MqttClient client = new MqttClient(broker, clientID, mp);
             MqttConnectOptions opt = new MqttConnectOptions();
@@ -387,6 +392,10 @@ public class FXMLbuilding01Controller implements Initializable {
             		+ "\"lightsB01_A02_power\":"+lightsB01_A02_power+","
             		+ "\"lightsB01_A03_power\":"+lightsB01_A03_power+","
             		+ "\"lightsB01_A04_power\":"+lightsB01_A04_power+","
+            		+ "\"B01_A01_energy\":"+B01_A01_energy+","
+            		+ "\"B01_A02_energy\":"+B01_A02_energy+","
+            		+ "\"B01_A03_energy\":"+B01_A03_energy+","
+            		+ "\"B01_A04_energy\":"+B01_A04_energy+","
             		+ "\"acB01_A01_mode\":"+acB01_A01_mode+","
             		+ "\"acB01_A01_temp\":"+acB01_A01_temp+","
             		+ "\"acB01_A02_mode\":"+acB01_A02_mode+","
