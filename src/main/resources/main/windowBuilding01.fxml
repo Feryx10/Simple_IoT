@@ -21,15 +21,15 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane id="AnchorPane" minHeight="720.0" minWidth="1280.0" prefHeight="400.0" prefWidth="1280.0" style="-fx-background-color: Cornsilk;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="windows.FXMLbuilding01Controller">
+<AnchorPane id="AnchorPane" minHeight="668.0" minWidth="1280.0" prefHeight="668.0" prefWidth="1280.0" style="-fx-background-color: Cornsilk;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="windows.FXMLbuilding01Controller">
    <children>
-      <AnchorPane layoutY="33.0" prefHeight="687.0" prefWidth="1280.0">
+      <AnchorPane layoutY="36.0" prefHeight="630.0" prefWidth="1280.0">
          <children>
-            <AnchorPane layoutX="4.0" layoutY="309.0" prefHeight="374.0" prefWidth="716.0" style="-fx-background-color: GhostWhite; -fx-background-radius: 10px;">
+            <AnchorPane layoutX="4.0" layoutY="254.0" prefHeight="368.0" prefWidth="716.0" style="-fx-background-color: GhostWhite; -fx-background-radius: 10px;">
                <children>
                   <AnchorPane layoutX="9.0" layoutY="14.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
                      <children>
-                        <Circle fx:id="LB1" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
+                        <Circle fx:id="LA1" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
                            <stroke>
                               <RadialGradient centerX="0.5165745856353591" centerY="0.5" radius="0.5">
                                  <stops>
@@ -60,36 +60,36 @@
                               <Image url="@bulb.png" />
                            </image>
                         </ImageView>
-                        <ToggleButton fx:id="buttonLB1" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB1" prefHeight="22.0" prefWidth="34.0" text="Off" />
-                        <Button layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
-                        <Button layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
-                        <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
+                        <ToggleButton fx:id="buttonLA1" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLA1" prefHeight="22.0" prefWidth="34.0" text="On" />
+                        <Button fx:id="downA1" layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMousePressed="#switchDown_A1" prefHeight="23.0" prefWidth="35.0" text="▽" />
+                        <Button fx:id="upA1" layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMousePressed="#switchUp_A1" prefHeight="23.0" prefWidth="35.0" text="△" />
+                        <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMousePressed="#switchMode_A1" prefHeight="40.0" prefWidth="40.0" text="M" />
                         <AnchorPane layoutX="65.0" layoutY="19.0" prefHeight="80.0" prefWidth="90.0" style="-fx-background-radius: 10px; -fx-background-color: CadetBlue;">
                            <children>
-                              <Text fx:id="Temp013" layoutX="33.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20°">
+                              <Text fx:id="displayAC_A1" layoutX="33.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20°">
                                  <font>
                                     <Font name="System Bold Italic" size="29.0" />
                                  </font>
                               </Text>
-                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="34.0" layoutY="50.0">
+                              <ImageView fx:id="coldA1" fitHeight="18.0" fitWidth="22.0" layoutX="34.0" layoutY="50.0">
                                  <image>
                                     <Image url="@cold.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
-                              <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
+                              <ImageView fx:id="hotA1" fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
                                  <image>
                                     <Image url="@hot.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
+                              <ImageView fx:id="fanA1" fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
                                  <image>
                                     <Image url="@fan.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
@@ -97,7 +97,7 @@
                                     <Font name="System Bold Italic" size="18.0" />
                                  </font>
                               </Text>
-                              <Circle fill="LIME" layoutX="14.0" layoutY="18.0" radius="6.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                              <Circle fx:id="acA1" fill="LIME" layoutX="14.0" layoutY="18.0" radius="6.0" stroke="TRANSPARENT" strokeType="INSIDE" />
                            </children>
                            <effect>
                               <InnerShadow choke="0.46">
@@ -109,12 +109,12 @@
                         </AnchorPane>
                         <AnchorPane layoutY="100.0" prefHeight="62.0" prefWidth="66.0" style="-fx-background-radius: 0 20 0 20; -fx-background-color: MintCream;">
                            <children>
-                              <TextField layoutX="5.0" layoutY="33.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="1000w/h">
+                              <TextField fx:id="consumptionA1" layoutX="5.0" layoutY="33.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="1000w/h">
                                  <font>
                                     <Font size="11.0" />
                                  </font>
                               </TextField>
-                              <TextField layoutX="5.0" layoutY="11.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="Temp Ex">
+                              <TextField fx:id="externalTA1" layoutX="5.0" layoutY="11.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="Temp Ex">
                                  <font>
                                     <Font size="11.0" />
                                  </font>
@@ -143,7 +143,7 @@
                   </AnchorPane>
                   <AnchorPane layoutX="187.0" layoutY="14.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
                      <children>
-                        <Circle fx:id="LB2" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
+                        <Circle fx:id="LA2" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
                            <stroke>
                               <RadialGradient centerX="0.5165745856353591" centerY="0.5" radius="0.5">
                                  <stops>
@@ -174,36 +174,36 @@
                               <Image url="@bulb.png" />
                            </image>
                         </ImageView>
-                        <ToggleButton fx:id="buttonLB2" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB2" prefHeight="22.0" prefWidth="34.0" text="Off" />
-                        <Button layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
-                        <Button layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
-                        <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
+                        <ToggleButton fx:id="buttonLA2" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLA2" prefHeight="22.0" prefWidth="34.0" text="On" />
+                        <Button fx:id="downA2" layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMousePressed="#switchDown_A2" prefHeight="23.0" prefWidth="35.0" text="▽" />
+                        <Button fx:id="upA2" layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMousePressed="#switchUp_A2" prefHeight="23.0" prefWidth="35.0" text="△" />
+                        <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMousePressed="#switchMode_A2" prefHeight="40.0" prefWidth="40.0" text="M" />
                         <AnchorPane layoutX="65.0" layoutY="19.0" prefHeight="80.0" prefWidth="90.0" style="-fx-background-radius: 10px; -fx-background-color: CadetBlue;">
                            <children>
-                              <Text fx:id="Temp0131" layoutX="33.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20°">
+                              <Text fx:id="displayAC_A2" layoutX="33.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20°">
                                  <font>
                                     <Font name="System Bold Italic" size="29.0" />
                                  </font>
                               </Text>
-                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="34.0" layoutY="50.0">
+                              <ImageView fx:id="coldA2" fitHeight="18.0" fitWidth="22.0" layoutX="34.0" layoutY="50.0">
                                  <image>
                                     <Image url="@cold.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
-                              <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
+                              <ImageView fx:id="hotA2" fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
                                  <image>
                                     <Image url="@hot.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
+                              <ImageView fx:id="fanA2" fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
                                  <image>
                                     <Image url="@fan.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
@@ -211,7 +211,7 @@
                                     <Font name="System Bold Italic" size="18.0" />
                                  </font>
                               </Text>
-                              <Circle fill="LIME" layoutX="14.0" layoutY="17.0" radius="6.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                              <Circle fx:id="acA2" fill="LIME" layoutX="14.0" layoutY="17.0" radius="6.0" stroke="TRANSPARENT" strokeType="INSIDE" />
                            </children>
                            <effect>
                               <InnerShadow choke="0.46">
@@ -223,12 +223,12 @@
                         </AnchorPane>
                         <AnchorPane layoutY="100.0" prefHeight="62.0" prefWidth="66.0" style="-fx-background-radius: 0 20 0 20; -fx-background-color: MintCream;">
                            <children>
-                              <TextField layoutX="5.0" layoutY="33.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="1000w/h">
+                              <TextField fx:id="consumptionA2" layoutX="5.0" layoutY="33.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="1000w/h">
                                  <font>
                                     <Font size="11.0" />
                                  </font>
                               </TextField>
-                              <TextField layoutX="5.0" layoutY="11.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="Temp Ex">
+                              <TextField fx:id="externalTA2" layoutX="5.0" layoutY="11.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="Temp Ex">
                                  <font>
                                     <Font size="11.0" />
                                  </font>
@@ -257,7 +257,7 @@
                   </AnchorPane>
                   <AnchorPane layoutX="365.0" layoutY="14.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
                      <children>
-                        <Circle fx:id="LB3" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
+                        <Circle fx:id="LA3" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
                            <stroke>
                               <RadialGradient centerX="0.5165745856353591" centerY="0.5" radius="0.5">
                                  <stops>
@@ -288,36 +288,36 @@
                               <Image url="@bulb.png" />
                            </image>
                         </ImageView>
-                        <ToggleButton fx:id="buttonLB3" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB3" prefHeight="22.0" prefWidth="34.0" text="Off" />
-                        <Button layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
-                        <Button layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
-                        <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
+                        <ToggleButton fx:id="buttonLA3" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLA3" prefHeight="22.0" prefWidth="34.0" text="On" />
+                        <Button fx:id="downA3" layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMousePressed="#switchDown_A3" prefHeight="23.0" prefWidth="35.0" text="▽" />
+                        <Button fx:id="upA3" layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMousePressed="#switchUp_A3" prefHeight="23.0" prefWidth="35.0" text="△" />
+                        <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMousePressed="#switchMode_A3" prefHeight="40.0" prefWidth="40.0" text="M" />
                         <AnchorPane layoutX="65.0" layoutY="19.0" prefHeight="80.0" prefWidth="90.0" style="-fx-background-radius: 10px; -fx-background-color: CadetBlue;">
                            <children>
-                              <Text fx:id="Temp0132" layoutX="33.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20°">
+                              <Text fx:id="displayAC_A3" layoutX="33.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20°">
                                  <font>
                                     <Font name="System Bold Italic" size="29.0" />
                                  </font>
                               </Text>
-                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="34.0" layoutY="50.0">
+                              <ImageView fx:id="coldA3" fitHeight="18.0" fitWidth="22.0" layoutX="34.0" layoutY="50.0">
                                  <image>
                                     <Image url="@cold.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
-                              <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
+                              <ImageView fx:id="hotA3" fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
                                  <image>
                                     <Image url="@hot.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
+                              <ImageView fx:id="fanA3" fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
                                  <image>
                                     <Image url="@fan.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
@@ -325,7 +325,7 @@
                                     <Font name="System Bold Italic" size="18.0" />
                                  </font>
                               </Text>
-                              <Circle fill="LIME" layoutX="14.0" layoutY="17.0" radius="6.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                              <Circle fx:id="acA3" fill="LIME" layoutX="14.0" layoutY="17.0" radius="6.0" stroke="TRANSPARENT" strokeType="INSIDE" />
                            </children>
                            <effect>
                               <InnerShadow choke="0.46">
@@ -337,12 +337,12 @@
                         </AnchorPane>
                         <AnchorPane layoutY="100.0" prefHeight="62.0" prefWidth="66.0" style="-fx-background-radius: 0 20 0 20; -fx-background-color: MintCream;">
                            <children>
-                              <TextField layoutX="5.0" layoutY="33.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="1000w/h">
+                              <TextField fx:id="consumptionA3" layoutX="5.0" layoutY="33.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="1000w/h">
                                  <font>
                                     <Font size="11.0" />
                                  </font>
                               </TextField>
-                              <TextField layoutX="5.0" layoutY="11.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="Temp Ex">
+                              <TextField fx:id="externalTA3" layoutX="5.0" layoutY="11.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="Temp Ex">
                                  <font>
                                     <Font size="11.0" />
                                  </font>
@@ -371,7 +371,7 @@
                   </AnchorPane>
                   <AnchorPane layoutX="543.0" layoutY="14.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
                      <children>
-                        <Circle fx:id="LB4" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
+                        <Circle fx:id="LA4" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
                            <stroke>
                               <RadialGradient centerX="0.5165745856353591" centerY="0.5" radius="0.5">
                                  <stops>
@@ -402,36 +402,36 @@
                               <Image url="@bulb.png" />
                            </image>
                         </ImageView>
-                        <ToggleButton fx:id="buttonLB4" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB4" prefHeight="22.0" prefWidth="34.0" text="Off" />
-                        <Button layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
-                        <Button layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
-                        <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
+                        <ToggleButton fx:id="buttonLA4" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLA4" prefHeight="22.0" prefWidth="34.0" text="On" />
+                        <Button fx:id="downA4" layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMousePressed="#switchDown_A4" prefHeight="23.0" prefWidth="35.0" text="▽" />
+                        <Button fx:id="upA4" layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMousePressed="#switchUp_A4" prefHeight="23.0" prefWidth="35.0" text="△" />
+                        <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" onMousePressed="#switchMode_A4" prefHeight="40.0" prefWidth="40.0" text="M" />
                         <AnchorPane layoutX="65.0" layoutY="19.0" prefHeight="80.0" prefWidth="90.0" style="-fx-background-radius: 10px; -fx-background-color: CadetBlue;">
                            <children>
-                              <Text fx:id="Temp0133" layoutX="33.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20°">
+                              <Text fx:id="displayAC_A4" layoutX="33.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="20°">
                                  <font>
                                     <Font name="System Bold Italic" size="29.0" />
                                  </font>
                               </Text>
-                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="34.0" layoutY="50.0">
+                              <ImageView fx:id="coldA4" fitHeight="18.0" fitWidth="22.0" layoutX="34.0" layoutY="50.0">
                                  <image>
                                     <Image url="@cold.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
-                              <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
+                              <ImageView fx:id="hotA4" fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
                                  <image>
                                     <Image url="@hot.png" />
                                  </image>
                               </ImageView>
-                              <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
+                              <ImageView fx:id="fanA4" fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
                                  <image>
                                     <Image url="@fan.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
@@ -439,7 +439,7 @@
                                     <Font name="System Bold Italic" size="18.0" />
                                  </font>
                               </Text>
-                              <Circle fill="LIME" layoutX="14.0" layoutY="17.0" radius="6.0" stroke="TRANSPARENT" strokeType="INSIDE" />
+                              <Circle fx:id="acA4" fill="LIME" layoutX="14.0" layoutY="17.0" radius="6.0" stroke="TRANSPARENT" strokeType="INSIDE" />
                            </children>
                            <effect>
                               <InnerShadow choke="0.46">
@@ -451,12 +451,12 @@
                         </AnchorPane>
                         <AnchorPane layoutY="100.0" prefHeight="62.0" prefWidth="66.0" style="-fx-background-radius: 0 20 0 20; -fx-background-color: MintCream;">
                            <children>
-                              <TextField layoutX="5.0" layoutY="33.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="1000w/h">
+                              <TextField fx:id="consumptionA4" layoutX="5.0" layoutY="33.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="1000w/h">
                                  <font>
                                     <Font size="11.0" />
                                  </font>
                               </TextField>
-                              <TextField layoutX="5.0" layoutY="11.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="Temp Ex">
+                              <TextField fx:id="externalTA4" layoutX="5.0" layoutY="11.0" maxHeight="18.0" maxWidth="55.0" minHeight="18.0" minWidth="55.0" prefHeight="18.0" prefWidth="55.0" text="Temp Ex">
                                  <font>
                                     <Font size="11.0" />
                                  </font>
@@ -483,7 +483,7 @@
                         <DropShadow />
                      </effect>
                   </AnchorPane>
-                  <AnchorPane layoutX="9.0" layoutY="202.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
+                  <AnchorPane layoutX="9.0" layoutY="199.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
                      <children>
                         <Circle fx:id="LB14" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
                            <stroke>
@@ -516,7 +516,7 @@
                               <Image url="@bulb.png" />
                            </image>
                         </ImageView>
-                        <ToggleButton fx:id="switchLB124" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB1" prefHeight="22.0" prefWidth="34.0" text="Off" />
+                        <ToggleButton fx:id="switchLB124" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLA1" prefHeight="22.0" prefWidth="34.0" text="On" />
                         <Button disable="true" layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
                         <Button disable="true" layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
                         <Button disable="true" layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
@@ -532,7 +532,7 @@
                                     <Image url="@cold.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
@@ -540,7 +540,7 @@
                                     <Image url="@hot.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
@@ -548,7 +548,7 @@
                                     <Image url="@fan.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
@@ -600,7 +600,7 @@
                         <DropShadow />
                      </effect>
                   </AnchorPane>
-                  <AnchorPane layoutX="187.0" layoutY="202.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
+                  <AnchorPane layoutX="187.0" layoutY="199.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
                      <children>
                         <Circle fx:id="LB15" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
                            <stroke>
@@ -633,7 +633,7 @@
                               <Image url="@bulb.png" />
                            </image>
                         </ImageView>
-                        <ToggleButton fx:id="switchLB125" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB1" prefHeight="22.0" prefWidth="34.0" text="Off" />
+                        <ToggleButton fx:id="switchLB125" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="34.0" text="On" />
                         <Button disable="true" layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
                         <Button disable="true" layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
                         <Button disable="true" layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
@@ -649,7 +649,7 @@
                                     <Image url="@cold.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
@@ -657,7 +657,7 @@
                                     <Image url="@hot.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
@@ -665,7 +665,7 @@
                                     <Image url="@fan.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
@@ -717,7 +717,7 @@
                         <DropShadow />
                      </effect>
                   </AnchorPane>
-                  <AnchorPane layoutX="453.0" layoutY="202.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
+                  <AnchorPane layoutX="453.0" layoutY="199.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
                      <children>
                         <Circle fx:id="LB16" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
                            <stroke>
@@ -750,7 +750,7 @@
                               <Image url="@bulb.png" />
                            </image>
                         </ImageView>
-                        <ToggleButton fx:id="switchLB126" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB1" prefHeight="22.0" prefWidth="34.0" text="Off" />
+                        <ToggleButton fx:id="switchLB126" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="34.0" text="On" />
                         <Button disable="true" layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
                         <Button disable="true" layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
                         <Button disable="true" layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
@@ -766,7 +766,7 @@
                                     <Image url="@cold.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
@@ -774,7 +774,7 @@
                                     <Image url="@hot.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <ImageView fitHeight="18.0" fitWidth="22.0" layoutX="60.0" layoutY="51.0">
@@ -782,7 +782,7 @@
                                     <Image url="@fan.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
@@ -839,7 +839,7 @@
                   <DropShadow />
                </effect>
             </AnchorPane>
-            <StackedBarChart layoutX="311.0" layoutY="7.0" prefHeight="290.0" prefWidth="513.0">
+            <StackedBarChart layoutX="352.0" layoutY="-1.0" prefHeight="249.0" prefWidth="482.0">
               <xAxis>
                 <CategoryAxis side="BOTTOM" />
               </xAxis>
@@ -847,8 +847,8 @@
                 <NumberAxis side="LEFT" />
               </yAxis>
             </StackedBarChart>
-            <PieChart fx:id="chart" layoutX="14.0" layoutY="6.0" prefHeight="290.0" prefWidth="290.0" />
-            <LineChart layoutX="833.0" layoutY="1.0" prefHeight="290.0" prefWidth="416.0">
+            <PieChart fx:id="chart" layoutX="4.0" prefHeight="249.0" prefWidth="346.0" />
+            <LineChart layoutX="845.0" layoutY="-1.0" prefHeight="249.0" prefWidth="416.0">
               <xAxis>
                 <CategoryAxis side="BOTTOM" />
               </xAxis>
@@ -856,9 +856,9 @@
                 <NumberAxis side="LEFT" />
               </yAxis>
             </LineChart>
-            <AnchorPane layoutX="729.0" layoutY="309.0" prefHeight="374.0" prefWidth="545.0" style="-fx-background-color: GhostWhite; -fx-background-radius: 10px;">
+            <AnchorPane layoutX="729.0" layoutY="254.0" prefHeight="368.0" prefWidth="545.0" style="-fx-background-color: GhostWhite; -fx-background-radius: 10px;">
                <children>
-                  <AnchorPane layoutX="5.0" layoutY="14.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
+                  <AnchorPane layoutX="10.0" layoutY="14.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
                      <children>
                         <Circle fx:id="LB11" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
                            <stroke>
@@ -891,7 +891,7 @@
                               <Image url="@bulb.png" />
                            </image>
                         </ImageView>
-                        <ToggleButton fx:id="switchLB121" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB1" prefHeight="22.0" prefWidth="34.0" text="Off" />
+                        <ToggleButton fx:id="switchLB121" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="34.0" text="On" />
                         <Button layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
                         <Button layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
                         <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
@@ -907,7 +907,7 @@
                                     <Image url="@cold.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
@@ -920,7 +920,7 @@
                                     <Image url="@fan.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
@@ -971,7 +971,7 @@
                         <DropShadow />
                      </effect>
                   </AnchorPane>
-                  <AnchorPane layoutX="186.0" layoutY="14.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
+                  <AnchorPane layoutX="191.0" layoutY="14.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
                      <children>
                         <Circle fx:id="LB111" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
                            <stroke>
@@ -1004,7 +1004,7 @@
                               <Image url="@bulb.png" />
                            </image>
                         </ImageView>
-                        <ToggleButton fx:id="switchLB1211" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB1" prefHeight="22.0" prefWidth="34.0" text="Off" />
+                        <ToggleButton fx:id="switchLB1211" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="34.0" text="On" />
                         <Button layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
                         <Button layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
                         <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
@@ -1020,7 +1020,7 @@
                                     <Image url="@cold.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
@@ -1033,7 +1033,7 @@
                                     <Image url="@fan.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
@@ -1084,7 +1084,7 @@
                         <DropShadow />
                      </effect>
                   </AnchorPane>
-                  <AnchorPane layoutX="370.0" layoutY="14.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
+                  <AnchorPane layoutX="375.0" layoutY="14.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
                      <children>
                         <Circle fx:id="LB121" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
                            <stroke>
@@ -1117,7 +1117,7 @@
                               <Image url="@bulb.png" />
                            </image>
                         </ImageView>
-                        <ToggleButton fx:id="switchLB1221" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB1" prefHeight="22.0" prefWidth="34.0" text="Off" />
+                        <ToggleButton fx:id="switchLB1221" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="34.0" text="On" />
                         <Button layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
                         <Button layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
                         <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
@@ -1133,7 +1133,7 @@
                                     <Image url="@cold.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
@@ -1146,7 +1146,7 @@
                                     <Image url="@fan.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
@@ -1197,7 +1197,7 @@
                         <DropShadow />
                      </effect>
                   </AnchorPane>
-                  <AnchorPane layoutX="5.0" layoutY="202.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
+                  <AnchorPane layoutX="10.0" layoutY="198.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
                      <children>
                         <Circle fx:id="LB141" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
                            <stroke>
@@ -1230,7 +1230,7 @@
                               <Image url="@bulb.png" />
                            </image>
                         </ImageView>
-                        <ToggleButton fx:id="switchLB1241" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB1" prefHeight="22.0" prefWidth="34.0" text="Off" />
+                        <ToggleButton fx:id="switchLB1241" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="34.0" text="On" />
                         <Button layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
                         <Button layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
                         <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
@@ -1246,7 +1246,7 @@
                                     <Image url="@cold.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
@@ -1259,7 +1259,7 @@
                                     <Image url="@fan.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
@@ -1310,7 +1310,7 @@
                         <DropShadow />
                      </effect>
                   </AnchorPane>
-                  <AnchorPane layoutX="183.0" layoutY="202.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
+                  <AnchorPane layoutX="188.0" layoutY="198.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
                      <children>
                         <Circle fx:id="LB151" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
                            <stroke>
@@ -1343,7 +1343,7 @@
                               <Image url="@bulb.png" />
                            </image>
                         </ImageView>
-                        <ToggleButton fx:id="switchLB1251" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB1" prefHeight="22.0" prefWidth="34.0" text="Off" />
+                        <ToggleButton fx:id="switchLB1251" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="34.0" text="On" />
                         <Button layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
                         <Button layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
                         <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
@@ -1359,7 +1359,7 @@
                                     <Image url="@cold.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
@@ -1372,7 +1372,7 @@
                                     <Image url="@fan.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
@@ -1423,7 +1423,7 @@
                         <DropShadow />
                      </effect>
                   </AnchorPane>
-                  <AnchorPane layoutX="370.0" layoutY="202.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
+                  <AnchorPane layoutX="375.0" layoutY="198.0" prefHeight="163.0" prefWidth="163.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 20px;">
                      <children>
                         <Circle fx:id="LB161" fill="#808080d1" layoutX="32.0" layoutY="45.0" radius="24.0" strokeType="INSIDE">
                            <stroke>
@@ -1456,7 +1456,7 @@
                               <Image url="@bulb.png" />
                            </image>
                         </ImageView>
-                        <ToggleButton fx:id="switchLB1261" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" onMousePressed="#switchLB1" prefHeight="22.0" prefWidth="34.0" text="Off" />
+                        <ToggleButton fx:id="switchLB1261" layoutX="15.0" layoutY="74.0" maxHeight="22.0" maxWidth="34.0" minHeight="22.0" minWidth="34.0" mnemonicParsing="false" prefHeight="22.0" prefWidth="34.0" text="On" />
                         <Button layoutX="73.0" layoutY="129.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="▽" />
                         <Button layoutX="73.0" layoutY="103.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="23.0" prefWidth="35.0" text="△" />
                         <Button layoutX="112.0" layoutY="109.0" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" mnemonicParsing="false" prefHeight="40.0" prefWidth="40.0" text="M" />
@@ -1472,7 +1472,7 @@
                                     <Image url="@cold.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <ImageView fitHeight="17.0" fitWidth="22.0" layoutX="8.0" layoutY="51.0">
@@ -1485,7 +1485,7 @@
                                     <Image url="@fan.png" />
                                  </image>
                                  <effect>
-                                    <GaussianBlur radius="4.0" />
+                                    <GaussianBlur radius="6.0" />
                                  </effect>
                               </ImageView>
                               <Text layoutX="72.0" layoutY="36.0" strokeType="OUTSIDE" strokeWidth="0.0" text="C">
@@ -1543,13 +1543,68 @@
             </AnchorPane>
          </children>
       </AnchorPane>
-      <Button layoutX="14.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#switchToPrimary" text="Main" />
-      <Button layoutX="83.0" layoutY="2.0" mnemonicParsing="false" text="E. Servicios Multiples" />
-      <Button layoutX="216.0" layoutY="2.0" mnemonicParsing="false" text="E. Ing. Civil en Minas" />
-      <Button layoutX="348.0" layoutY="2.0" mnemonicParsing="false" text="E. Ing. Civil Electrica" />
-      <Button layoutX="474.0" layoutY="2.0" mnemonicParsing="false" text="E. Ing. Civil Electrica" />
-      <Button layoutX="606.0" layoutY="2.0" mnemonicParsing="false" text="Gimnasio" />
-      <Button layoutX="679.0" layoutY="2.0" mnemonicParsing="false" text="Salas E" />
-      <Button layoutX="737.0" layoutY="2.0" mnemonicParsing="false" text="E. Laboratorios " />
+      <ToggleButton layoutX="7.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#switchToPrimary" prefHeight="25.0" prefWidth="127.0" text="Main">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX">
+               <color>
+                  <Color opacity="0.6450216174125671" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ToggleButton>
+      <ToggleButton layoutX="154.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#switchToPrimary" prefHeight="25.0" prefWidth="127.0" selected="true" text="E. Servicios Multiples">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX">
+               <color>
+                  <Color opacity="0.6450216174125671" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ToggleButton>
+      <ToggleButton layoutX="289.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#switchToPrimary" prefHeight="25.0" prefWidth="127.0" text="E. Ing. Civil en Minas">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX">
+               <color>
+                  <Color opacity="0.6450216174125671" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ToggleButton>
+      <ToggleButton layoutX="424.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#switchToPrimary" prefHeight="25.0" prefWidth="127.0" text="E. Ing. Civil Electrica">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX">
+               <color>
+                  <Color opacity="0.6450216174125671" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ToggleButton>
+      <ToggleButton layoutX="559.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#switchToPrimary" prefHeight="25.0" prefWidth="127.0" text="Gimnasio">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX">
+               <color>
+                  <Color opacity="0.6450216174125671" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ToggleButton>
+      <ToggleButton layoutX="694.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#switchToPrimary" prefHeight="25.0" prefWidth="127.0" text="Salas E">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX">
+               <color>
+                  <Color opacity="0.6450216174125671" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ToggleButton>
+      <ToggleButton layoutX="829.0" layoutY="5.0" mnemonicParsing="false" onMouseClicked="#switchToPrimary" prefHeight="25.0" prefWidth="127.0" text="E. Laboratorios ">
+         <effect>
+            <DropShadow blurType="ONE_PASS_BOX">
+               <color>
+                  <Color opacity="0.6450216174125671" />
+               </color>
+            </DropShadow>
+         </effect>
+      </ToggleButton>
    </children>
 </AnchorPane>
