@@ -370,10 +370,10 @@ public class FXMLbuilding01Controller implements Initializable {
         String clientID = "GPU1";
         MemoryPersistence mp = new MemoryPersistence();
 
-    	boolean lightsB01_A01_power = Rooms.lightsB01_A01.isMode();
-    	boolean lightsB01_A02_power = Rooms.lightsB01_A02.isMode();
-    	boolean lightsB01_A03_power = Rooms.lightsB01_A03.isMode();
-    	boolean lightsB01_A04_power = Rooms.lightsB01_A04.isMode();
+    	boolean lightsB01_A01_power = Rooms.lightsB01_A01.getMode();
+    	boolean lightsB01_A02_power = Rooms.lightsB01_A02.getMode();
+    	boolean lightsB01_A03_power = Rooms.lightsB01_A03.getMode();
+    	boolean lightsB01_A04_power = Rooms.lightsB01_A04.getMode();
     	try {
             MqttClient client = new MqttClient(broker, clientID, mp);
             MqttConnectOptions opt = new MqttConnectOptions();
