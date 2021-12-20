@@ -23,10 +23,15 @@ import javafx.scene.text.Text;
 import main.App;
 import objects.AirConditioner;
 import objects.Lights;
+import org.eclipse.paho.client.mqttv3.MqttClient;
+import org.eclipse.paho.client.mqttv3.MqttConnectOptions;
+import org.eclipse.paho.client.mqttv3.MqttException;
+import org.eclipse.paho.client.mqttv3.MqttMessage;
+import org.eclipse.paho.client.mqttv3.persist.MemoryPersistence;
 
 public class FXMLbuilding01Controller implements Initializable {
 
-	
+	// SALA 11
 	@FXML
 	private Circle LA1;
 	@FXML
@@ -50,7 +55,7 @@ public class FXMLbuilding01Controller implements Initializable {
 	@FXML
 	private TextField consumptionA1;
 	
-	
+	// SALA 12
 	@FXML
 	private Circle LA2;
 	@FXML
@@ -74,6 +79,7 @@ public class FXMLbuilding01Controller implements Initializable {
 	@FXML
 	private TextField consumptionA2;
 	
+	// SALA 13
 	@FXML
 	private Circle LA3;
 	@FXML
@@ -97,6 +103,7 @@ public class FXMLbuilding01Controller implements Initializable {
 	@FXML
 	private TextField consumptionA3;
 	
+	// SALA 14
 	@FXML
 	private Circle LA4;
 	@FXML
@@ -133,7 +140,7 @@ public class FXMLbuilding01Controller implements Initializable {
 	boolean statusLA4 = false;
     
     public void switchLA1() {
-    	this.statusLA1 = this.clickSwitch(this.statusLA1, this.buttonLA1, this.LA1);	
+    	this.statusLA1 = this.clickSwitch(Rooms.lightsB01_A01, this.statusLA1, this.buttonLA1, this.LA1);	
     	this.updateStatus();
     }
     
@@ -155,80 +162,82 @@ public class FXMLbuilding01Controller implements Initializable {
     
     
     public void switchLA2() {
-    	this.statusLA2 = this.clickSwitch(this.statusLA2, this.buttonLA2, this.LA2);	
+    	this.statusLA2 = this.clickSwitch(Rooms.lightsB01_A02, this.statusLA2, this.buttonLA2, this.LA2);	
     	this.updateStatus();
     }
     
     public void switchUp_A2() {
-    	this.switchTemp(true, this.displayAC_A2, Rooms.acB02_A02);
+    	this.switchTemp(true, this.displayAC_A2, Rooms.acB01_A02);
     	this.updateStatus();
     }
     
     public void switchDown_A2() {
-    	this.switchTemp(false, this.displayAC_A2, Rooms.acB02_A02);	
+    	this.switchTemp(false, this.displayAC_A2, Rooms.acB01_A02);	
     	this.updateStatus();
     }
     
     public void switchMode_A2() {
-    	this.switchMode(this.acA2, this.displayAC_A2, Rooms.acB02_A02, 
+    	this.switchMode(this.acA2, this.displayAC_A2, Rooms.acB01_A02, 
     			this.upA2, this.downA2, this.hotA2, this.coldA2, this.fanA2);
     	this.updateStatus();
     }    
     
     
     public void switchLA3() {
-    	this.statusLA3 = this.clickSwitch(this.statusLA3, this.buttonLA3, this.LA3);	
+    	this.statusLA3 = this.clickSwitch(Rooms.lightsB01_A03, this.statusLA3, this.buttonLA3, this.LA3);	
     	this.updateStatus();
     }
     
     public void switchUp_A3() {
-    	this.switchTemp(true, this.displayAC_A3, Rooms.acB03_A03);
+    	this.switchTemp(true, this.displayAC_A3, Rooms.acB01_A03);
     	this.updateStatus();
     }
     
     public void switchDown_A3() {
-    	this.switchTemp(false, this.displayAC_A3, Rooms.acB03_A03);	
+    	this.switchTemp(false, this.displayAC_A3, Rooms.acB01_A03);	
     	this.updateStatus();
     }
     
     public void switchMode_A3() {
-    	this.switchMode(this.acA3, this.displayAC_A3, Rooms.acB03_A03, 
+    	this.switchMode(this.acA3, this.displayAC_A3, Rooms.acB01_A03, 
     			this.upA3, this.downA3, this.hotA3, this.coldA3, this.fanA3);
     	this.updateStatus();
     }    
     
     
     public void switchLA4() {
-    	this.statusLA4 = this.clickSwitch(this.statusLA4, this.buttonLA4, this.LA4);	
+    	this.statusLA4 = this.clickSwitch(Rooms.lightsB01_A04, this.statusLA4, this.buttonLA4, this.LA4);	
     	this.updateStatus();
     }
     
     public void switchUp_A4() {
-    	this.switchTemp(true, this.displayAC_A4, Rooms.acB04_A04);
+    	this.switchTemp(true, this.displayAC_A4, Rooms.acB01_A04);
     	this.updateStatus();
     }
     
     public void switchDown_A4() {
-    	this.switchTemp(false, this.displayAC_A4, Rooms.acB04_A04);	
+    	this.switchTemp(false, this.displayAC_A4, Rooms.acB01_A04);	
     	this.updateStatus();
     }
     
     public void switchMode_A4() {
-    	this.switchMode(this.acA4, this.displayAC_A4, Rooms.acB04_A04, 
+    	this.switchMode(this.acA4, this.displayAC_A4, Rooms.acB01_A04, 
     			this.upA4, this.downA4, this.hotA4, this.coldA4, this.fanA4);
     	this.updateStatus();
     }    
     
-    private boolean clickSwitch(boolean status, ToggleButton x, Circle y) {
-    	if(status) {
-    		x.setText("On");
-    		y.setFill(Color.GRAY);
-    	}
-    	else{
-    		x.setText("Off");  
-    		y.setFill(Color.RED);
-    	}     	
-    	return status=!status;    	
+    private boolean clickSwitch(Lights lights, boolean status, ToggleButton x, Circle y) {
+        if(status) {
+            x.setText("On");
+            y.setFill(Color.GRAY);
+            lights.setMode(false);
+        }
+        else{
+            x.setText("Off");  
+            y.setFill(Color.RED);
+            lights.setMode(true);
+        }         
+        return status=!status;        
     }
     
     private void switchTemp(boolean isUp,Text displayText, AirConditioner temp) {    	
@@ -308,10 +317,61 @@ public class FXMLbuilding01Controller implements Initializable {
     	
     }
     
-    public String updateStatus(){    
-    	String status=" ";  	
+    public void updateStatus(){    
+    	String topic = "v1/devices/me/telemetry";
+        String broker = "tcp://181.162.226.138:1883";
+        String token = "FargsHPCuYAPTV5aG5pj";
+        int qos = 0;
+        String clientID = "GPU1";
+        MemoryPersistence mp = new MemoryPersistence();
+
+    	boolean lightsB01_A01_power = Rooms.lightsB01_A01.isMode();
+    	boolean lightsB01_A02_power = Rooms.lightsB01_A02.isMode();
+    	boolean lightsB01_A03_power = Rooms.lightsB01_A03.isMode();
+    	boolean lightsB01_A04_power = Rooms.lightsB01_A04.isMode();
     	
-    	return status;
+    	String acB01_A01_mode = Rooms.acB01_A01.getMode();
+    	int acB01_A01_temp = Rooms.acB01_A01.getTemp();
+    	String acB01_A02_mode = Rooms.acB01_A02.getMode();
+    	int acB01_A02_temp = Rooms.acB01_A02.getTemp();
+    	String acB01_A03_mode = Rooms.acB01_A03.getMode();
+    	int acB01_A03_temp = Rooms.acB01_A03.getTemp();
+    	String acB01_A04_mode = Rooms.acB01_A04.getMode();
+    	int acB01_A04_temp = Rooms.acB01_A04.getTemp();
+    	
+    	// Formato 
+    	try {
+            MqttClient client = new MqttClient(broker, clientID, mp);
+            MqttConnectOptions opt = new MqttConnectOptions();
+            opt.setCleanSession(true);
+            opt.setKeepAliveInterval(60);
+            opt.setUserName(token);
+            client.connect(opt);
+            
+            String content = "{"
+            		+ "\"lightsB01_A01_power\":"+lightsB01_A01_power+","
+            		+ "\"lightsB01_A02_power\":"+lightsB01_A02_power+","
+            		+ "\"lightsB01_A03_power\":"+lightsB01_A03_power+","
+            		+ "\"lightsB01_A04_power\":"+lightsB01_A04_power+","
+            		+ "\"acB01_A01_mode\":"+acB01_A01_mode+","
+            		+ "\"acB01_A01_temp\":"+acB01_A01_temp+","
+            		+ "\"acB01_A02_mode\":"+acB01_A02_mode+","
+            		+ "\"acB01_A02_temp\":"+acB01_A02_temp+","
+            		+ "\"acB01_A03_mode\":"+acB01_A03_mode+","
+            		+ "\"acB01_A03_temp\":"+acB01_A03_temp+","
+            		+ "\"acB01_A04_mode\":"+acB01_A04_mode+","
+            		+ "\"acB01_A04_temp\":"+acB01_A04_temp+""
+            		+ "}";
+            
+            System.out.println(content);
+            
+            
+            MqttMessage message = new MqttMessage(content.getBytes());
+            message.setQos(qos);
+            client.publish(topic, message);
+        } catch (MqttException e) {
+            e.printStackTrace();
+        }
     }
     
     @FXML

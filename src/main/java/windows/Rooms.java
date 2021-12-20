@@ -4,18 +4,18 @@ import objects.AirConditioner;
 import objects.Lights;
 
 public class Rooms {
-	//Salas - Labs - Banos - Oficinas
+	//Salas - Labs - Banios - Oficinas
 	
-		//--- Servicioa Multiples ---
+		//--- Servicios Multiples ---
 		//Piso 1	
-		protected static Lights lightsB01_A01 = new Lights("lightsB01_A01", 4);
-		protected static AirConditioner acB01_A01 = new AirConditioner("acB01_A01");	
-		protected static Lights lightsB01_A02 = new Lights("lightsB01_A02", 4);
-		protected static AirConditioner acB01_A02 = new AirConditioner("acB01_A02");	
-		protected static Lights lightsB01_A03 = new Lights("lightsB01_A03", 4);
-		protected static AirConditioner acB01_A03 = new AirConditioner("acB01_A03");	
-		protected static Lights lightsB01_A04 = new Lights("lightsB01_A04", 4);
-		protected static AirConditioner acB01_A04 = new AirConditioner("acB01_A04");
+		/* SALA 11 - AMPOLLETA */ protected static Lights lightsB01_A01 = new Lights("lightsB01_A01", 4);
+		/* SALA 11 - AIRE ACON */ protected static AirConditioner acB01_A01 = new AirConditioner("acB01_A01");	
+		/* SALA 12 - AMPOLLETA */ protected static Lights lightsB01_A02 = new Lights("lightsB01_A02", 4);
+		/* SALA 12 - AIRE ACON */ protected static AirConditioner acB01_A02 = new AirConditioner("acB01_A02");	
+		/* SALA 13 - AMPOLLETA */ protected static Lights lightsB01_A03 = new Lights("lightsB01_A03", 4);
+		/* SALA 13 - AIRE ACON */ protected static AirConditioner acB01_A03 = new AirConditioner("acB01_A03");	
+		/* SALA 14 - AMPOLLETA */ protected static Lights lightsB01_A04 = new Lights("lightsB01_A04", 4);
+		/* SALA 11 - AIRE ACON */ protected static AirConditioner acB01_A04 = new AirConditioner("acB01_A04");
 		
 		protected static Lights lightsB01_A05 = new Lights("lightsB01_A05", 2);
 		protected static AirConditioner acB01_A05 = new AirConditioner("acB01_A05");	
